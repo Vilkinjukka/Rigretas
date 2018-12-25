@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../style.css">
 <style>
 .w3-sidebar a {font-family: "Roboto", sans-serif}
 body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
@@ -50,7 +51,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     </div>
 
 		<!-- Sijoituksessa pudotus -->
-		<a onclick="Pudotus('SijoitusPudotus')" href="javascript:void(0)" class="w3-bar-item w3-button w3-left-align" id="myBtn">
+		<!--<a onclick="Pudotus('SijoitusPudotus')" href="javascript:void(0)" class="w3-bar-item w3-button w3-left-align" id="myBtn">
       Sijoituksessa <i class="fa fa-caret-down"></i>
     </a>
     <div id="SijoitusPudotus" class="w3-bar-block w3-hide w3-padding-large w3-medium">
@@ -58,12 +59,12 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     </div>
 		<a href="../raakaruokinta.html" class="w3-bar-item w3-button">Raakaruokinta</a>
     <a href="../otayhteytta.html" class="w3-bar-item w3-button">Ota yhteyttä</a>
-  </div>
+  </div>-->
 </nav>
 
 <!-- Top menu on small screens -->
 <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
-  <h3 class="w3-wide"><b>KENNEL</b><br><b>RIGRETA'S</b></h3>
+  <h3 class="w3-wide" style="max-width:196px;margin-left:16px;float:left"><b>KENNEL</b><br><b>RIGRETA'S</b></h3>
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
 </header>
 
@@ -82,6 +83,18 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   </header>
 
 
+  <div class="w3-row-padding">
+    <div class="row">
+      <div class="column">
+        <img src="https://i.imgur.com/IHtEnTi.png" alt="Banner" class="img">
+        <p class="text-below">Debbie's Laphroaig Triplewood "Betty"</p>
+      </div>
+
+      <div class="column">
+        <p>FI MVA FI JVA BALT MVA EE MVA LT MVA LV MVA EE JMVA Debbie's Laphroaig Triplewood "Betty" <br> syntynyt 28.3.2014 omistaja Riikka Ahtila</p>
+      </div>
+    </div>
+  </div>
   <!-- Product grid -->
   <div class="w3-row">
     <div class="w3-col l3 s6">
@@ -158,10 +171,10 @@ function Pudotus(y) {
 	if (x.className.indexOf("w3-show") != -1) {
 		x.className = x.className.replace(" w3-show", "");
 	}
-	x = document.getElementById("SijoitusPudotus");
+	/*x = document.getElementById("SijoitusPudotus");
 	if (x.className.indexOf("w3-show") != -1) {
 		x.className = x.className.replace(" w3-show", "");
-	}
+	}*/
 	x = document.getElementById("MuistoissaPudotus");
 	if (x.className.indexOf("w3-show") != -1) {
 		x.className = x.className.replace(" w3-show", "");
