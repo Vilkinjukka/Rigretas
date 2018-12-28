@@ -1,4 +1,4 @@
-function $id(id) {
+ function $id(id) {
   return document.getElementById(id);
 }
 
@@ -14,6 +14,7 @@ function loadHTML(url, id, callback) {
 		if (callback)
 			callback(url, id);
 	}
+  $id(id).scrollTop(0);
 }
 
 (function($) {
