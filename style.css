@@ -1,26 +1,14 @@
-.text-below {
-  margin-bottom: 32px;
-  margin-top: 0px;
-  padding-top: 0px;
-}
-
 .img {
   margin: auto;
   width: 100%;
   margin-right:16px;
   margin-bottom:2px;
 }
-.img-2 {
-  margin: auto;
-  width: 100%;
-  margin-right:16px;
-  margin-bottom:16px;
-}
 
 .column {
   float: left;
   width: 50%;
-  padding: 10px;
+  padding: 8px;
 }
 
 .row:after {
@@ -28,8 +16,45 @@
   display: table;
   clear: both;
 }
-
 .active {
   color: black;
-  background-color: #c9d5ea;
+}
+
+.post-img{
+  max-width: 340px;
+  max-height: auto;
+  height: auto;
+  padding-right: 16px;
+  padding-bottom: 0px;
+}
+
+.text-below {
+  display: block;
+  clear: left;
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 8px;
+  font-size: 90%;
+}
+
+.post{
+  background-color: #f1f1f1;
+  text-align: left;
+  padding: 16px;
+  margin-top: 0px;
+  margin-bottom: 32px;
+}
+
+.otsikko-uutinen {
+  margin: 0px;
+}
+
+.pvm-uutinen {
+  margin-top: 0px;
+  margin-bottom: 16px;
+  font-size: 90%;
+}
+
+.post-text {
+  letter-spacing: 110%;
 }

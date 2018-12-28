@@ -20,9 +20,10 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
 		<h3 class="w3-wide"><b>KENNEL</b><br><b>RIGRETA'S</b></h3>
   </div>
-  <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+  <div class="w3-large w3-text-grey" style="font-weight:bold">
     <a onclick="closeAll()" href="etusivu" data-navigo class="w3-bar-item w3-button globalNavlink" id=nav-etusivu>Etusivu</a>
 		<a onclick="closeAll()" href="uutiset" data-navigo class="w3-bar-item w3-button globalNavlink" id=nav-uutiset>Uutiset</a>
+    <a onclick="closeAll()" href="galleria" data-navigo class="w3-bar-item w3-button globalNavlink" id=nav-galleria>Galleria</a>
 
 		<!-- Koirat pudotus -->
     <a onclick="Pudotus('pudotus-koirat')" href="javascript:void(0)" class="w3-bar-item w3-button w3-left-align" id="pudotus-koirat-up">
@@ -48,7 +49,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
       Pennut <i class="fa fa-caret-down"></i>
     </a>
 		<div id="pudotus-pennut" class="w3-bar-block w3-hide w3-padding-large w3-medium globalNavlink dropDown">
-			<a href="arctic" data-navigo class="w3-bar-item w3-button" id="nav-arctic" >Arctic</a>
+			<a href="arctic" data-navigo class="w3-bar-item w3-button" id="nav-arctic" >Arctic-pentue</a>
     </div>
 
 		<!-- Sijoituksessa pudotus -->
@@ -61,6 +62,8 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 
 		<a onclick="closeAll()" href="raakaruokinta" data-navigo class="w3-bar-item w3-button" id=nav-raakaruokinta>Raakaruokinta</a>
     <a onclick="closeAll()" href="otayhteytta" data-navigo class="w3-bar-item w3-button" id=nav-otayhteytta>Ota yhteyttä</a>
+    <!--<a onclick="displayImage('https://i.imgur.com/9ddDfG0.jpg','hei olen kuvateksti');" class="w3-bar-item w3-button">News</a>-->
+
   </div>
 </nav>
 
@@ -84,10 +87,18 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     <p class="w3-left" id="otsikko"></p>
   </header>
 
-
-  <!-- Product grid -->
   <div id="main">
   </div>
+
+  <div id="image-display" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom" style="padding:32px; padding-bottom: 8px; width:720px;">
+    <div class="w3-container w3-white w3-center">
+      <!--<i onclick="document.getElementById('image-display').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxsmall" ></i> -->
+        <img src="" alt="kuva" id="kuva" style="height:auto; width:auto;">
+        <p class="text-below" id="kuvateksti" style="margin-bottom:0px;">Teksijuhgyfrdtfybhjnkti</p>
+    </div>
+  </div>
+</div>
 
 
   <!-- Footer -->
@@ -121,7 +132,6 @@ function Pudotus(y) {
 		x.className += " w3-show";
 	}
 }
-
 
 // Open and close sidebar
 function w3_open() {

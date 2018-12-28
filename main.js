@@ -38,6 +38,13 @@ function loadHTML(url, id, callback) {
       $('.dropDown').removeClass('w3-show');
     }
 
+    displayImage = function(src1,text)
+    {
+      $('#image-display').css('display','block');
+      $('#kuva').attr("src", src1);
+      $('#kuvateksti').html(text);
+    }
+
 		var updateNav = function(page, pageTitle, pudotus)
 		{
       $('#otsikko').html(pageTitle);
@@ -55,13 +62,15 @@ function loadHTML(url, id, callback) {
 		router.on({
 			// 'main' is the id of the div element inside which we render the HTML
       'etusivu': () => {updateNav('etusivu',"Etusivu"); loadHTML('./Content/etusivu.html','main',initContent);},
+      'etusivu-m': () => {updateNav('etusivu',"Etusivu"); loadHTML('./Content/etusivu-m.html','main',initContent);},
       'uutiset': () => {updateNav('uutiset',"Uutiset"); loadHTML('./Content/uutiset.html','main',initContent);},
+      'galleria': () => {updateNav('galleria',"Galleria"); loadHTML('./Content/galleria.html','main',initContent);},
       'betty': () => {updateNav('betty',"Betty", "pudotus-koirat"); loadHTML('./Content/Koirat/betty.html','main',initContent);},
       'siru': () => {updateNav('siru',"Siru", "pudotus-koirat"); loadHTML('./Content/Koirat/siru.html','main',initContent);},
       'retu': () => {updateNav('retu',"Retu", "pudotus-koirat"); loadHTML('./Content/Koirat/retu.html','main',initContent);},
       'tahvo': () => {updateNav('tahvo',"Tahvo", "pudotus-muistoissa"); loadHTML('./Content/Muistoissa/tahvo.html','main',initContent);},
       'wilma': () => {updateNav('wilma',"Wilma", "pudotus-muistoissa"); loadHTML('./Content/Muistoissa/wilma.html','main',initContent);},
-      'arctic': () => {updateNav('arctic',"Pentua Arctic", "pudotus-pennut"); loadHTML('./Content/Pennut/arctic.html','main',initContent);},
+      'arctic': () => {updateNav('arctic',"Pentue Arctic", "pudotus-pennut"); loadHTML('./Content/Pennut/arctic.html','main',initContent);},
       'testikoira': () => {updateNav('testikoira',"Testikoira", "pudotus-sijoituksessa"); loadHTML('./Content/Sijoituksessa/testikoira.html','main',initContent);},
 			'raakaruokinta': () => {updateNav('raakaruokinta',"Raakaruokinta"); loadHTML('./Content/raakaruokinta.html','main',initContent);},
       'otayhteytta': () => {updateNav('otayhteytta',"Ota Yhteyttä"); loadHTML('./Content/otayhteytta.html','main',initContent);},
