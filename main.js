@@ -14,7 +14,6 @@ function loadHTML(url, id, callback) {
 		if (callback)
 			callback(url, id);
 	}
-  $id(id).scrollTop(0);
 }
 
 (function($) {
@@ -41,9 +40,34 @@ function loadHTML(url, id, callback) {
 
     displayImage = function(src1,text)
     {
+      var mobile = false;
       $('#image-display').css('display','block');
-      $('#kuva').attr("src", src1);
+      $('#kuva-id').attr("src", src1);
+      if(mobile)
+      {
+        $('#kuva-id').css('width','320px');
+      }
+      else
+      {
+        $('#kuva-id').css('height','570px');
+      }
       $('#kuvateksti').html(text);
+
+      var theImage = new Image();
+      theImage.src = src1;
+      if(mobile)
+      {
+        $('#kuva-holder').css('min-width',320+64+'px');
+      }
+      else
+      {
+        $(theImage).on('load',function(){
+          var orgWidth = theImage.width;
+          //alert(orgWidth);
+          $('#kuva-holder').css('min-width',orgWidth+420+'px');
+        });
+      }
+
     }
 
 		var updateNav = function(page, pageTitle, pudotus)
