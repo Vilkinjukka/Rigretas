@@ -14,8 +14,7 @@
 }
 .post-img{
   max-width: 340px;
-  max-height: auto;
-  height: auto;
+  width: 340px;
   padding-right: 16px;
   padding-bottom: 0px;
 }
@@ -27,7 +26,12 @@
   margin-bottom: 8px;
   font-size: 90%;
 }
-
+.image-grayout {
+  transition: 0.3s;
+}
+.image-grayout:hover {
+  opacity: 0.7;
+}
 /*Uutiset*/
 .post{
   background-color: #f1f1f1;
@@ -153,4 +157,11 @@
   .modal-content {
     width: 100%;
   }
+}
+
+/*Pentu kuvat*/
+.image-pentu {
+  width: 256px;
+  padding-top: 0px;
+  padding-left: 0px;
 }
