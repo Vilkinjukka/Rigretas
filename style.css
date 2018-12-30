@@ -1,16 +1,9 @@
-.img {
-  margin: auto;
-  width: 100%;
-  margin-right:16px;
-  margin-bottom:2px;
-}
-
+/*Misc*/
 .column {
   float: left;
   width: 50%;
   padding: 8px;
 }
-
 .row:after {
   content: "";
   display: table;
@@ -19,7 +12,6 @@
 .active {
   color: black;
 }
-
 .post-img{
   max-width: 340px;
   max-height: auto;
@@ -27,7 +19,6 @@
   padding-right: 16px;
   padding-bottom: 0px;
 }
-
 .text-below {
   display: block;
   clear: left;
@@ -37,6 +28,7 @@
   font-size: 90%;
 }
 
+/*Uutiset*/
 .post{
   background-color: #f1f1f1;
   text-align: left;
@@ -44,18 +36,121 @@
   margin-top: 0px;
   margin-bottom: 32px;
 }
-
 .otsikko-uutinen {
   margin: 0px;
 }
-
 .pvm-uutinen {
   margin-top: 0px;
   margin-bottom: 16px;
   font-size: 90%;
 }
 
-.image-display {
-  padding-top:8px;
-  padding-bottom:8px;
+/*Gallery*/
+.image-gallery {
+  display: inline;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+  max-width: 230px;
+  padding: 8px;
+}
+.image-gallery:hover {
+  opacity: 0.7;
+}
+.button-gallery {
+  background-color: white;
+  border: 2px solid #0b566f;
+  border-radius: 4px;
+  color: #0b566f;
+  padding: 10px 26px;
+  margin: 8px;
+  text-align: center;
+  font-weight: 900;
+  font-size: 14px;
+}
+.button-gallery:hover {
+  background-color: #149dcc;
+  color: white;
+  border-color: #149dcc;
+}
+.button-active {
+  border-color: #149dcc;
+  color: white;
+  background-color: #149dcc;;
+}
+
+/*Modal*/
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 4; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: false; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  position: relative;
+  margin: auto;
+  display: block;
+  height: 95%;
+  bottom: 32px;
+  /*max-width: 700px;
+  max-height: 320px;*/
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  position: relative;
+  bottom: 32px;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
 }

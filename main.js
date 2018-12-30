@@ -16,6 +16,21 @@ function loadHTML(url, id, callback) {
 	}
 }
 
+function galleryButtonclick(x)
+{
+  $('.button-gallery').removeClass('button-active');
+  $('#button-'+x).addClass('button-active');
+  if(x != 'kaikki')
+  {
+    $('.image-gallery').css('display','none');
+    $('.gallery-'+x).css('display','inline');
+  }
+  else
+  {
+    $('.image-gallery').css('display','inline');
+  }
+}
+
 (function($) {
 
 	$(function() {
@@ -36,38 +51,6 @@ function loadHTML(url, id, callback) {
     closeAll = function()
     {
       $('.dropDown').removeClass('w3-show');
-    }
-
-    displayImage = function(src1,text)
-    {
-      var mobile = false;
-      $('#image-display').css('display','block');
-      $('#kuva-id').attr("src", src1);
-      if(mobile)
-      {
-        $('#kuva-id').css('width','320px');
-      }
-      else
-      {
-        $('#kuva-id').css('height','570px');
-      }
-      $('#kuvateksti').html(text);
-
-      var theImage = new Image();
-      theImage.src = src1;
-      if(mobile)
-      {
-        $('#kuva-holder').css('min-width',320+64+'px');
-      }
-      else
-      {
-        $(theImage).on('load',function(){
-          var orgWidth = theImage.width;
-          //alert(orgWidth);
-          $('#kuva-holder').css('min-width',orgWidth+420+'px');
-        });
-      }
-
     }
 
 		var updateNav = function(page, pageTitle, pudotus)
@@ -94,7 +77,7 @@ function loadHTML(url, id, callback) {
       'retu': () => {updateNav('retu',"Retu", "pudotus-koirat"); loadHTML('./Content/Koirat/retu.html','main',initContent);},
       'tahvo': () => {updateNav('tahvo',"Tahvo", "pudotus-muistoissa"); loadHTML('./Content/Muistoissa/tahvo.html','main',initContent);},
       'wilma': () => {updateNav('wilma',"Wilma", "pudotus-muistoissa"); loadHTML('./Content/Muistoissa/wilma.html','main',initContent);},
-      'arctic': () => {updateNav('arctic',"Pentue Arctic", "pudotus-pennut"); loadHTML('./Content/Pennut/arctic.html','main',initContent);},
+      'arctic': () => {updateNav('arctic',"Arctic-pentue", "pudotus-pennut"); loadHTML('./Content/Pennut/arctic.html','main',initContent);},
       'pennut': () => {updateNav('pennut',"Pennut", "pudotus-pennut"); loadHTML('./Content/Pennut/pennut.html','main',initContent);},
       'sijoituksessa': () => {updateNav('sijoituksessa',"Sijoituskoira", "pudotus-sijoituksessa"); loadHTML('./Content/Sijoituksessa/sijoituksessa.html','main',initContent);},
       'testikoira': () => {updateNav('testikoira',"Testikoira", "pudotus-sijoituksessa"); loadHTML('./Content/Sijoituksessa/testikoira.html','main',initContent);},

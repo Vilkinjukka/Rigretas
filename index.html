@@ -3,6 +3,11 @@
 <title>Etusivu</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Kuvaus">
+<meta name="author" content="Riikka Ahtila">
+<meta name="keywords" content="Cockerspanieli, English cockerspaniel, Rigretas,
+Rigreta's, Cokkeri, Trimmaus, Raakaruoka, Raakaruokinta, Kennel, Kenneli, Koiran pentu, Pentu">
+
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
@@ -66,8 +71,6 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 
 		<a onclick="closeAll(); window.scrollTo(0,0);" href="raakaruokinta" data-navigo class="w3-bar-item w3-button" id=nav-raakaruokinta>Raakaruokinta</a>
     <a onclick="closeAll(); window.scrollTo(0,0);" href="trimmaus" data-navigo class="w3-bar-item w3-button" id=nav-trimmaus>Trimmaus</a>
-    <!--<a onclick="displayImage('https://i.imgur.com/9ddDfG0.jpg','hei olen kuvateksti');" class="w3-bar-item w3-button">Kuva</a>
-    <a onclick="displayImage('https://i.imgur.com/GTZ9TUp.jpg','hei olen kuvateksti');" class="w3-bar-item w3-button">Kuva</a>-->
 
   </div>
 </nav>
@@ -95,14 +98,22 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   <div id="main">
   </div>
 
-  <div id="image-display" class="w3-modal image-display">
+  <!--<div id="image-display" class="w3-modal image-display">
     <div class="w3-modal-content w3-animate-zoom" id="kuva-holder"style="padding:32px; padding-bottom:8px;">
-      <div class="w3-container w3-white w3-center">
-        <!--<i onclick="document.getElementById('image-display').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxsmall" ></i> -->
-          <img src="" alt="kuva" id="kuva-id">
-          <p class="text-below" id="kuvateksti" style="margin-bottom:8px;">Teksijuhgyfrdtfybhjnkti</p>
-      </div>
+        <i onclick="document.getElementById('image-display').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxsmall" ></i>
+        <img src="" alt="kuva" id="kuva-id">
+        <p class="text-below" id="kuvateksti" style="margin-bottom:8px;">Teksijuhgyfrdtfybhjnkti</p>
     </div>
+  </div>-->
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <!-- The Close Button -->
+    <span class="close">&times;</span>
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img01">
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption"></div>
   </div>
 
 
@@ -119,8 +130,6 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
         <a href="https://www.instagram.com/rigretas/" target="_blank" class="fa fa-instagram w3-hover-opacity w3-large"></a>
     </div>
   </footer>
-
-  <!-- End page content -->
 </div>
 
 <script>
@@ -149,6 +158,26 @@ function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
   document.getElementById("myOverlay").style.display = "none";
 }
+
+function viewImage(url,text) {
+  // Get the modal
+  var modal = document.getElementById('myModal');
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var modalImg = document.getElementById("img01");
+  var captionText = document.getElementById("caption");
+  modal.style.display = "block";
+  modalImg.src = url;
+  captionText.innerHTML = text;
+
+}
+
+// When the user clicks on <span> (x), close the modal
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function() {
+  var modal = document.getElementById('myModal');
+  modal.style.display = "none";
+}
+
 </script>
 
 <script src="jquery-3.3.1.min.js"></script>
