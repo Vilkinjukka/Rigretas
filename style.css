@@ -55,7 +55,7 @@
   cursor: pointer;
   transition: 0.3s;
   width: 100%;
-  max-width: 230px;
+  max-width: 226px;
   padding: 8px;
 }
 .image-gallery:hover {

@@ -26,18 +26,18 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 		<h3 class="w3-wide"><b>KENNEL</b><br><b>RIGRETA'S</b></h3>
   </div>
   <div class="w3-large w3-text-grey" style="font-weight:bold;">
-    <a onclick="closeAll(); window.scrollTo(0,0);" href="etusivu" data-navigo class="w3-bar-item w3-button globalNavlink" id=nav-etusivu>Etusivu</a>
-		<a onclick="closeAll(); window.scrollTo(0,0);" href="uutiset" data-navigo class="w3-bar-item w3-button globalNavlink" id=nav-uutiset>Uutiset</a>
-    <a onclick="closeAll(); window.scrollTo(0,0);" href="galleria" data-navigo class="w3-bar-item w3-button globalNavlink" id=nav-galleria>Galleria</a>
+    <a onclick="closeAll(); changePage();" href="etusivu" data-navigo class="w3-bar-item w3-button globalNavlink" id=nav-etusivu>Etusivu</a>
+		<a onclick="closeAll(); changePage();" href="uutiset" data-navigo class="w3-bar-item w3-button globalNavlink" id=nav-uutiset>Uutiset</a>
+    <a onclick="closeAll(); changePage();" href="galleria" data-navigo class="w3-bar-item w3-button globalNavlink" id=nav-galleria>Galleria</a>
 
 		<!-- Koirat pudotus -->
     <a onclick="Pudotus('pudotus-koirat')" class="w3-bar-item w3-button w3-left-align" id="pudotus-koirat-up">
       Koirat <i class="fa fa-caret-down"></i>
     </a>
 		<div id="pudotus-koirat" class="w3-bar-block w3-hide w3-padding-large w3-medium globalNavlink dropDown ">
-      <a href="betty" data-navigo class="w3-bar-item w3-button" id="nav-betty">Betty</a>
-      <a href="retu" data-navigo class="w3-bar-item w3-button" id="nav-retu">Retu</a>
-      <a href="siru" data-navigo class="w3-bar-item w3-button" id="nav-siru">Siru</a>
+      <a onclick="changePage();" href="betty" data-navigo class="w3-bar-item w3-button" id="nav-betty">Betty</a>
+      <a onclick="changePage();" href="retu" data-navigo class="w3-bar-item w3-button" id="nav-retu">Retu</a>
+      <a onclick="changePage();" href="siru" data-navigo class="w3-bar-item w3-button" id="nav-siru">Siru</a>
     </div>
 
 		<!-- Muistoissa pudotus -->
@@ -45,8 +45,8 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
       Muistoissa <i class="fa fa-caret-down"></i>
     </a>
 		<div id="pudotus-muistoissa" class="w3-bar-block w3-hide w3-padding-large w3-medium globalNavlink dropDown">
-			<a href="tahvo" data-navigo class="w3-bar-item w3-button" id="nav-tahvo" >Tahvo</a>
-      <a href="wilma" data-navigo class="w3-bar-item w3-button" id="nav-wilma" >Wilma</a>
+			<a onclick="changePage();" href="tahvo" data-navigo class="w3-bar-item w3-button" id="nav-tahvo" >Tahvo</a>
+      <a onclick="changePage();" href="wilma" data-navigo class="w3-bar-item w3-button" id="nav-wilma" >Wilma</a>
     </div>
 
 		<!-- Pennut pudotus -->
@@ -54,11 +54,11 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
       Pennut <i class="fa fa-caret-down"></i>
     </a>
 		<div id="pudotus-pennut" class="w3-bar-block w3-hide w3-padding-large w3-medium globalNavlink dropDown">
-			<a onclick="window.scrollTo(0,0); "href="arctic" data-navigo class="w3-bar-item w3-button" id="nav-arctic" >Arctic-pentue</a>
+			<a onclick="changePage(); "href="arctic" data-navigo class="w3-bar-item w3-button" id="nav-arctic" >Arctic-pentue</a>
     </div>
 
 		<!-- Sijoituksessa pudotus -->
-		<a onclick="window.scrollTo(0,0);" href="sijoituksessa" data-navigo class="w3-bar-item w3-button w3-left-align globalNavlink" id="pudotus-sijoituksessa-up">
+		<a onclick="changePage(); window.scrollTo(0,0);" href="sijoituksessa" data-navigo class="w3-bar-item w3-button w3-left-align globalNavlink" id="pudotus-sijoituksessa-up">
       Sijoituskoira
     </a>
     <!--
@@ -66,11 +66,11 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
       Sijoituskoira <i class="fa fa-caret-down"></i>
     </a>
     <div id="pudotus-sijoitus" class="w3-bar-block w3-hide w3-padding-large w3-medium globalNavlink dropDown">
-      <a href="testikoira" data-navigo class="w3-bar-item w3-button" id=nav-testikoira>Testikoira</a>
+      <a onclick="changePage();" href="testikoira" data-navigo class="w3-bar-item w3-button" id=nav-testikoira>Testikoira</a>
     </div>-->
 
-		<a onclick="closeAll(); window.scrollTo(0,0);" href="raakaruokinta" data-navigo class="w3-bar-item w3-button" id=nav-raakaruokinta>Raakaruokinta</a>
-    <a onclick="closeAll(); window.scrollTo(0,0);" href="trimmaus" data-navigo class="w3-bar-item w3-button" id=nav-trimmaus>Trimmaus</a>
+		<a onclick="closeAll(); changePage();" href="raakaruokinta" data-navigo class="w3-bar-item w3-button" id=nav-raakaruokinta>Raakaruokinta</a>
+    <a onclick="closeAll(); changePage();" href="trimmaus" data-navigo class="w3-bar-item w3-button" id=nav-trimmaus>Trimmaus</a>
 
   </div>
 </nav>
@@ -159,6 +159,12 @@ function detectBrowser() {
   {
       document.getElementById("IE-warning").style.display = "block";
   }
+}
+
+function changePage()
+{
+  window.scrollTo(0,0);
+  w3_close();
 }
 
 // Open and close sidebar
