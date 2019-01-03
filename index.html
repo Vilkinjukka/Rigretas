@@ -3,7 +3,7 @@
 <title>Etusivu</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Kuvaus">
+<meta name="description" content="Tervetuloa tutustumaan Rigreta's kenneliin!">
 <meta name="author" content="Riikka Ahtila">
 <meta name="keywords" content="Cockerspanieli, English cockerspaniel, Rigretas,
 Rigreta's, Cokkeri, Trimmaus, Raakaruoka, Raakaruokinta, Kennel, Kenneli, Koiran pentu, Pentu">
@@ -95,9 +95,12 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     <p class="w3-left" id="otsikko"></p>
   </header>
 
+  <div style="display:none">
+      <h3>Tervetuloa tutustumaan Rigreta's kenneliin!<h3>
+  </div>
+
   <div id="IE-warning" style="display:none">
-    <div class="w3-row" style="padding:8px;">
-      <h3>Pahoittelut, mutta emme tue Internet Explorer selainta<h3>
+    <div id="warning-message" class="w3-row" style="padding:16px;">
     </div>
   </div>
 
@@ -153,11 +156,33 @@ function Pudotus(y) {
 	}
 }
 
+function hasClass(element, cls) {
+    return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+}
+
 function detectBrowser() {
   var isIE = /*@cc_on!@*/false || !!document.documentMode;
   if(isIE)
+  if(hasClass(document.getElementById('main'),'Loaded') == 0)
   {
-      document.getElementById("IE-warning").style.display = "block";
+    var node = document.createElement("h3");
+    var textnode = document.createTextNode("Pahoittelut, mutta jokin meni nyt pieleen");
+    node.appendChild(textnode);
+    document.getElementById("warning-message").appendChild(node);
+    if(isIE)
+    {
+      var node = document.createElement("p");
+      var textnode = document.createTextNode("Vaikuttaa siltä, että käytät Internet Explorer selainta. Olemme pahoillamme, mutta emme tue kyseistä selainta. Suosittelemme avaamaan sivun uudelleen Google Chromella, Mozilla Firefoxi:lla tai Microsoft Edge:llä.");
+      node.appendChild(textnode);
+    }
+    else
+    {
+      var node = document.createElement("p");
+      var textnode = document.createTextNode("Olemme pahoillamme, mutta emme tue käyttämääsi selainta. Suosittelemme avaamaan sivun uudelleen Google Chromella, Mozilla Firefoxi:lla tai Microsoft Edge:llä.");
+      node.appendChild(textnode);
+    }
+    document.getElementById("warning-message").appendChild(node);
+    document.getElementById("IE-warning").style.display = "block";
   }
 }
 

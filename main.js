@@ -11,6 +11,7 @@ function loadHTML(url, id, callback) {
 	req.send();
 	req.onload = () => {
 		$id(id).innerHTML = req.responseText;
+    $('#'+id).addClass('Loaded');
 		if (callback)
 			callback(url, id);
 	}
