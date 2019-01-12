@@ -59,7 +59,11 @@ function galleryButtonclick(x)
       $('#otsikko').html(pageTitle);
       document.title = pageTitle;
 			$('.w3-bar-item').removeClass('active');
-			$('#nav-'+page).addClass('active');
+      if(page != "")
+      {
+        $('#nav-'+page).addClass('active');
+      }
+
       if(typeof pudotus === 'string')
       {
         $('#'+pudotus).addClass('w3-show');
@@ -84,6 +88,8 @@ function galleryButtonclick(x)
       'testikoira': () => {updateNav('testikoira',"Testikoira", "pudotus-sijoituksessa"); loadHTML('./Content/Sijoituksessa/testikoira.html','main',initContent);},
 			'raakaruokinta': () => {updateNav('raakaruokinta',"Raakaruokinta"); loadHTML('./Content/raakaruokinta.html','main',initContent);},
       'trimmaus': () => {updateNav('trimmaus',"Trimmaus"); loadHTML('./Content/trimmaus.html','main',initContent);},
+      'policy': () => {updateNav('',"Tietosuojaseloste"); loadHTML('./Content/privacy.html','main',initContent);},
+      'terms': () => {updateNav('',"Käyttöehdot"); loadHTML('./Content/terms.html','main',initContent);},
 
 
 		});

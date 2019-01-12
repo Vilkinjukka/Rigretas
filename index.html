@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131670307-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-131670307-1');
+  </script>
 
 <title>Etusivu</title>
 <meta charset="UTF-8">
@@ -138,12 +147,37 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
         <p><i class="fa fa-fw fa-envelope"></i> rigretas@gmail.com</p>
 				<p><i class="fa fa-fw fa-map-marker"></i> Laamannintie 9 14300 Renko</p>
         <p><b>Y-tunnus:</b> 2927495-3</p>
-        <br>
+        <p><a onclick="closeAll(); changePage();" href="policy" data-navigo style="margin-bottom:132px;">Tietosuojaseloste</a></p>
+        <p><a onclick="closeAll(); changePage();" href="terms" data-navigo>Käyttöehdot</a></p>
+
         <a href="https://web.facebook.com/groups/516478331874611" target="_blank" class="fa fa-facebook-official w3-hover-opacity w3-large"></a>
         <a href="https://www.instagram.com/rigretas/" target="_blank" class="fa fa-instagram w3-hover-opacity w3-large"></a>
     </div>
   </footer>
 </div>
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+  <script>
+  window.addEventListener("load", function(){
+  window.cookieconsent.initialise({
+    "palette": {
+      "popup": {
+        "background": "#252e39"
+      },
+      "button": {
+        "background": "#14a7d0"
+      }
+    },
+    "theme": "classic",
+    "content": {
+      "message": "Tämä sivusto käyttää evästeitä käyttäjäkokemuksen parantamiseksi. Käyttämällä verkkosivustoa hyväksyt kaikki evästeet evästekäytäntöjemme mukaisesti.",
+      "dismiss": "Ok!",
+      "link": "Lue lisää",
+      "href": "/#!policy"
+    }
+  })});
+  </script>
+</body>
 
 <script>
 function Pudotus(y) {

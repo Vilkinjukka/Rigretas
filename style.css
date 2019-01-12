@@ -1,4 +1,5 @@
 /*Misc*/
+
 .column {
   float: left;
   width: 50%;
@@ -84,9 +85,9 @@
 }
 .button-gallery {
   background-color: white;
-  border: 2px solid #0b566f;
+  border: 2px solid #14a7d0;
   border-radius: 4px;
-  color: #0b566f;
+  color: #14a7d0;
   padding: 10px 26px;
   margin: 8px;
   text-align: center;
@@ -94,9 +95,9 @@
   font-size: 14px;
 }
 .button-gallery:hover {
-  background-color: #149dcc;
+  background-color: #72cae2;
   color: white;
-  border-color: #149dcc;
+  border-color: #72cae2;
 }
 .button-active {
   border-color: #149dcc;
