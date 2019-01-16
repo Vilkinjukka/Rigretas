@@ -39,51 +39,52 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 		<!--<h3 class="w3-wide"><b>KENNEL</b><br><b>RIGRETA'S</b></h3>-->
   </div>
   <div class="w3-large w3-text-grey" style="font-weight:bold;">
-    <a onclick="closeAll(); changePage();" href="etusivu" data-navigo class="w3-bar-item w3-button globalNavlink" id=nav-etusivu>Etusivu</a>
-		<a onclick="closeAll(); changePage();" href="uutiset" data-navigo class="w3-bar-item w3-button globalNavlink" id=nav-uutiset>Uutiset</a>
-    <a onclick="closeAll(); changePage();" href="galleria" data-navigo class="w3-bar-item w3-button globalNavlink" id=nav-galleria>Galleria</a>
+    <a onclick="closeAll(); changePage();" href="etusivu" data-navigo class="w3-bar-item w3-button globalNavlink nav" id=nav-etusivu>Etusivu</a>
+		<a onclick="closeAll(); changePage();" href="uutiset" data-navigo class="w3-bar-item w3-button globalNavlink nav" id=nav-uutiset>Uutiset</a>
+    <a onclick="closeAll(); changePage();" href="galleria" data-navigo class="w3-bar-item w3-button globalNavlink nav" id=nav-galleria>Galleria</a>
 
 		<!-- Koirat pudotus -->
-    <a onclick="Pudotus('pudotus-koirat')" class="w3-bar-item w3-button w3-left-align" id="pudotus-koirat-up">
+    <a onclick="Pudotus('pudotus-koirat')" class="w3-bar-item w3-button w3-left-align nav" id="pudotus-koirat-up">
       Koirat <i class="fa fa-caret-down"></i>
     </a>
-		<div id="pudotus-koirat" class="w3-bar-block w3-hide w3-padding-large w3-medium globalNavlink dropDown ">
-      <a onclick="changePage();" href="betty" data-navigo class="w3-bar-item w3-button" id="nav-betty">Betty</a>
-      <a onclick="changePage();" href="retu" data-navigo class="w3-bar-item w3-button" id="nav-retu">Retu</a>
-      <a onclick="changePage();" href="siru" data-navigo class="w3-bar-item w3-button" id="nav-siru">Siru</a>
+		<div id="pudotus-koirat" class="w3-bar-block w3-hide w3-padding-large w3-medium globalNavlink dropDown nav">
+      <a onclick="changePage();" href="betty" data-navigo class="w3-bar-item w3-button nav" id="nav-betty">Betty</a>
+      <a onclick="changePage();" href="retu" data-navigo class="w3-bar-item w3-button nav" id="nav-retu">Retu</a>
+      <a onclick="changePage();" href="siru" data-navigo class="w3-bar-item w3-button nav" id="nav-siru">Siru</a>
     </div>
 
 		<!-- Muistoissa pudotus -->
-    <a onclick="Pudotus('pudotus-muistoissa')" href="javascript:void(0)" class="w3-bar-item w3-button w3-left-align" id="pudotus-muistoissa-up">
+    <a onclick="Pudotus('pudotus-muistoissa')" href="javascript:void(0)" class="w3-bar-item w3-button w3-left-align nav" id="pudotus-muistoissa-up">
       Muistoissa <i class="fa fa-caret-down"></i>
     </a>
 		<div id="pudotus-muistoissa" class="w3-bar-block w3-hide w3-padding-large w3-medium globalNavlink dropDown">
-			<a onclick="changePage();" href="tahvo" data-navigo class="w3-bar-item w3-button" id="nav-tahvo" >Tahvo</a>
-      <a onclick="changePage();" href="wilma" data-navigo class="w3-bar-item w3-button" id="nav-wilma" >Wilma</a>
+			<a onclick="changePage();" href="tahvo" data-navigo class="w3-bar-item w3-button nav" id="nav-tahvo" >Tahvo</a>
+      <a onclick="changePage();" href="wilma" data-navigo class="w3-bar-item w3-button nav" id="nav-wilma" >Wilma</a>
     </div>
 
 		<!-- Pennut pudotus -->
-    <a onclick="Pudotus('pudotus-pennut'); window.scrollTo(0,0);" href="pennut" data-navigo class="w3-bar-item w3-button w3-left-align" id="pudotus-pennut-up">
+    <a onclick="Pudotus('pudotus-pennut'); window.scrollTo(0,0);" href="pennut" data-navigo class="w3-bar-item w3-button w3-left-align nav" id="pudotus-pennut-up">
       Pennut <i class="fa fa-caret-down"></i>
     </a>
 		<div id="pudotus-pennut" class="w3-bar-block w3-hide w3-padding-large w3-medium globalNavlink dropDown">
-			<a onclick="changePage(); "href="arctic" data-navigo class="w3-bar-item w3-button" id="nav-arctic" >Arctic-pentue</a>
+			<a onclick="changePage(); "href="arctic" data-navigo class="w3-bar-item w3-button nav" id="nav-arctic" >Arctic-pentue</a>
     </div>
 
 		<!-- Sijoituksessa pudotus -->
-		<a onclick="changePage(); window.scrollTo(0,0);" href="sijoituksessa" data-navigo class="w3-bar-item w3-button w3-left-align globalNavlink" id="pudotus-sijoituksessa-up">
+		<a onclick="changePage(); window.scrollTo(0,0);" href="sijoituksessa" data-navigo class="w3-bar-item w3-button w3-left-align globalNavlink nav" id="pudotus-sijoituksessa-up">
       Sijoituskoira
     </a>
     <!--
-		<a onclick="Pudotus('pudotus-sijoitus'); window.scrollTo(0,0);" href="sijoituksessa" data-navigo class="w3-bar-item w3-button w3-left-align globalNavlink" id="pudotus-sijoituksessa-up">
+		<a onclick="Pudotus('pudotus-sijoitus'); window.scrollTo(0,0);" href="sijoituksessa" data-navigo class="w3-bar-item w3-button w3-left-align globalNavlink nav" id="pudotus-sijoituksessa-up">
       Sijoituskoira <i class="fa fa-caret-down"></i>
     </a>
     <div id="pudotus-sijoitus" class="w3-bar-block w3-hide w3-padding-large w3-medium globalNavlink dropDown">
       <a onclick="changePage();" href="testikoira" data-navigo class="w3-bar-item w3-button" id=nav-testikoira>Testikoira</a>
     </div>-->
 
-		<a onclick="closeAll(); changePage();" href="raakaruokinta" data-navigo class="w3-bar-item w3-button" id=nav-raakaruokinta>Raakaruokinta</a>
-    <a onclick="closeAll(); changePage();" href="trimmaus" data-navigo class="w3-bar-item w3-button" id=nav-trimmaus>Trimmaus</a>
+		<a onclick="closeAll(); changePage();" href="raakaruokinta" data-navigo class="nav w3-bar-item w3-button nav" id=nav-raakaruokinta>Raakaruokinta</a>
+    <a onclick="closeAll(); changePage();" href="trimmaus" data-navigo class="w3-bar-item w3-button nav" id=nav-trimmaus>Trimmaus</a>
+    <a onclick="closeAll(); changePage();" href="linkkejä" data-navigo class="w3-bar-item w3-button globalNavlink nav active" id=nav-linkkejä>Linkkejä</a>
 
   </div>
 </nav>
@@ -98,7 +99,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:250px">
+<div class="w3-main" id="content" style="margin-left:250px">
 
   <!-- Push down content on small screens -->
   <div class="w3-hide-large" style="margin-top:83px"></div>

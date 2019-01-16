@@ -1,5 +1,7 @@
 /*Misc*/
-
+.nav {
+  padding: 5px 16px !important;
+}
 .column {
   float: left;
   width: 50%;

@@ -61,8 +61,9 @@ function galleryButtonclick(x)
 			$('.w3-bar-item').removeClass('active');
       if(page != "")
       {
-        $('#nav-'+page).addClass('active');
+
       }
+      $('#nav-'+page).addClass('active');
 
       if(typeof pudotus === 'string')
       {
@@ -90,6 +91,7 @@ function galleryButtonclick(x)
       'trimmaus': () => {updateNav('trimmaus',"Trimmaus"); loadHTML('./Content/trimmaus.html','main',initContent);},
       'policy': () => {updateNav('',"Tietosuojaseloste"); loadHTML('./Content/privacy.html','main',initContent);},
       'terms': () => {updateNav('',"Käyttöehdot"); loadHTML('./Content/terms.html','main',initContent);},
+      'linkkejä': () => {updateNav('linkkejä',"Linkkejä"); loadHTML('./Content/linkkejä.html','main',initContent);},
 
 
 		});
@@ -98,7 +100,7 @@ function galleryButtonclick(x)
 		router.on(() => {updateNav('etusivu',"Etusivu"); loadHTML('./Content/etusivu.html', 'main', initContent); });
 
 		// set the 404 route
-		router.notFound((query) => { $id('main').innerHTML = '<h3>Couldn\'t find the page you\'re looking for...</h3>'; })
+		router.notFound((query) => { $id('main').innerHTML = '<h3>Hups sivua ei löytyny...</h3> <p>Tarkista linkin oikeinkirjoitus</p>  '; })
 
 		router.resolve();
 
