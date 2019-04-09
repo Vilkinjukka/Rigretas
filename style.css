@@ -1,4 +1,7 @@
 /*Misc*/
+img {
+  vertical-align: top;
+}
 .nav {
   padding: 6px 16px !important;
 }
@@ -15,11 +18,18 @@
 .active {
   color: black;
 }
-.post-img{
+.uutinen-img{
   max-width: 340px;
   width: 340px;
   padding-right: 16px;
   padding-bottom: 0px;
+}
+.post-img{
+  max-width: 340px;
+  width: 340px;
+  padding-top: 16px;
+  padding-right: 16px;
+  padding-bottom: 4px;
 }
 .text-below {
   display: block;
