@@ -1,0 +1,202 @@
+/*Misc*/
+img {
+  vertical-align: top;
+}
+.nav {
+  padding: 6px 16px !important;
+}
+.column {
+  float: left;
+  width: 50%;
+  padding: 8px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.active {
+  color: black;
+}
+.uutinen-img{
+  max-width: 340px;
+  width: 340px;
+  padding-right: 16px;
+  padding-bottom: 0px;
+}
+.post-img{
+  max-width: 340px;
+  width: 340px;
+  padding-top: 16px;
+  padding-right: 16px;
+  padding-bottom: 4px;
+}
+.text-below {
+  display: block;
+  clear: left;
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 8px;
+  font-size: 90%;
+}
+.image-grayout {
+  transition: 0.3s;
+}
+.image-grayout:hover {
+  opacity: 0.7;
+}
+/*Uutiset*/
+.post{
+  background-color: #f1f1f1;
+  text-align: left;
+  padding: 16px;
+  margin-top: 0px;
+  margin-bottom: 32px;
+}
+.otsikko-uutinen {
+  margin: 0px;
+}
+.pvm-uutinen {
+  margin-top: 0px;
+  margin-bottom: 16px;
+  font-size: 90%;
+}
+
+/*Gallery*/
+.image-gallery {
+  display: inline;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+  max-width: 226px;
+  padding: 8px;
+}
+@media only screen and (max-width: 1000px){
+  .image-gallery {
+    width: 24%;
+  }
+}
+@media only screen and (max-width: 750px){
+  .image-gallery {
+    width: 32%;
+  }
+}
+@media only screen and (max-width: 514px){
+  .image-gallery {
+    width: 49%;
+  }
+}
+@media only screen and (max-width: 280px){
+  .image-gallery {
+    width: 100%;
+  }
+}
+
+.image-gallery:hover {
+  opacity: 0.7;
+}
+.button-gallery {
+  background-color: white;
+  border: 2px solid #14a7d0;
+  border-radius: 4px;
+  color: #14a7d0;
+  padding: 10px 26px;
+  margin: 8px;
+  text-align: center;
+  font-weight: 900;
+  font-size: 14px;
+}
+.button-gallery:hover {
+  background-color: #72cae2;
+  color: white;
+  border-color: #72cae2;
+}
+.button-active {
+  border-color: #149dcc;
+  color: white;
+  background-color: #149dcc;;
+}
+
+/*Modal*/
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 4; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: false; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  position: relative;
+  margin: auto;
+  display: block;
+  height: 95%;
+  bottom: 32px;
+  /*max-width: 700px;
+  max-height: 320px;*/
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  position: relative;
+  bottom: 32px;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 95%;
+    height: auto;
+  }
+}
+
+/*Pentu kuvat*/
+.image-pentu {
+  width: 256px;
+  padding-top: 0px;
+  padding-left: 0px;
+}

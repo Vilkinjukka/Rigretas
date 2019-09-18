@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131670307-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-131670307-1');
+  </script>
+
+<title>Etusivu</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Tervetuloa tutustumaan Rigreta's kenneliin!">
+<meta name="author" content="Riikka Ahtila">
+<meta name="keywords" content="Cockerspanieli, English cockerspaniel, Rigretas,
+Rigreta's, Cokkeri, Trimmaus, Raakaruoka, Raakaruokinta, Kennel, Kenneli, Koiran pentu, Pentu">
+<link rel="icon" href="https://i.imgur.com/j51IegGs.png">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+.w3-sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+</style>
+</head>
+<body class="w3-content" onload="detectBrowser()"style="max-width:1200px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+    <img src="https://i.imgur.com/qHMivBM.png" alt="Logo" style="width:210px">
+		<!--<h3 class="w3-wide"><b>KENNEL</b><br><b>RIGRETA'S</b></h3>-->
+  </div>
+  <div class="w3-large w3-text-grey" style="font-weight:bold;">
+    <a onclick="closeAll(); changePage();" href="etusivu" data-navigo class="w3-bar-item w3-button globalNavlink nav" id=nav-etusivu>Etusivu</a>
+		<a onclick="closeAll(); changePage();" href="uutiset" data-navigo class="w3-bar-item w3-button globalNavlink nav" id=nav-uutiset>Uutiset</a>
+    <a onclick="closeAll(); changePage();" href="galleria" data-navigo class="w3-bar-item w3-button globalNavlink nav" id=nav-galleria>Galleria</a>
+
+		<!-- Koirat pudotus -->
+    <a onclick="Pudotus('pudotus-koirat')" class="w3-bar-item w3-button w3-left-align nav" id="pudotus-koirat-up">
+      Koirat <i class="fa fa-caret-down"></i>
+    </a>
+		<div id="pudotus-koirat" class="w3-bar-block w3-hide w3-padding-large w3-medium globalNavlink dropDown nav">
+      <a onclick="changePage();" href="betty" data-navigo class="w3-bar-item w3-button nav" id="nav-betty">Betty</a>
+      <a onclick="changePage();" href="retu" data-navigo class="w3-bar-item w3-button nav" id="nav-retu">Retu</a>
+      <a onclick="changePage();" href="siru" data-navigo class="w3-bar-item w3-button nav" id="nav-siru">Siru</a>
+    </div>
+
+		<!-- Muistoissa pudotus -->
+    <a onclick="Pudotus('pudotus-muistoissa')" href="javascript:void(0)" class="w3-bar-item w3-button w3-left-align nav" id="pudotus-muistoissa-up">
+      Muistoissa <i class="fa fa-caret-down"></i>
+    </a>
+		<div id="pudotus-muistoissa" class="w3-bar-block w3-hide w3-padding-large w3-medium globalNavlink dropDown">
+			<a onclick="changePage();" href="tahvo" data-navigo class="w3-bar-item w3-button nav" id="nav-tahvo" >Tahvo</a>
+      <a onclick="changePage();" href="wilma" data-navigo class="w3-bar-item w3-button nav" id="nav-wilma" >Wilma</a>
+    </div>
+
+		<!-- Pennut pudotus -->
+    <a onclick="Pudotus('pudotus-pennut'); window.scrollTo(0,0);" href="pennut" data-navigo class="w3-bar-item w3-button w3-left-align nav" id="pudotus-pennut-up">
+      Pennut <i class="fa fa-caret-down"></i>
+    </a>
+		<div id="pudotus-pennut" class="w3-bar-block w3-hide w3-padding-large w3-medium globalNavlink dropDown">
+			<a onclick="changePage(); "href="arctic" data-navigo class="w3-bar-item w3-button nav" id="nav-arctic" >Arctic-pentue</a>
+    </div>
+
+		<!-- Sijoituksessa pudotus -->
+		<a onclick="changePage(); window.scrollTo(0,0);" href="sijoituksessa" data-navigo class="w3-bar-item w3-button w3-left-align globalNavlink nav" id="pudotus-sijoituksessa-up">
+      Sijoituskoira
+    </a>
+    <!--
+		<a onclick="Pudotus('pudotus-sijoitus'); window.scrollTo(0,0);" href="sijoituksessa" data-navigo class="w3-bar-item w3-button w3-left-align globalNavlink nav" id="pudotus-sijoituksessa-up">
+      Sijoituskoira <i class="fa fa-caret-down"></i>
+    </a>
+    <div id="pudotus-sijoitus" class="w3-bar-block w3-hide w3-padding-large w3-medium globalNavlink dropDown">
+      <a onclick="changePage();" href="testikoira" data-navigo class="w3-bar-item w3-button" id=nav-testikoira>Testikoira</a>
+    </div>-->
+
+		<a onclick="closeAll(); changePage();" href="raakaruokinta" data-navigo class="nav w3-bar-item w3-button nav" id=nav-raakaruokinta>Raakaruokinta</a>
+    <a onclick="closeAll(); changePage();" href="trimmaus" data-navigo class="w3-bar-item w3-button nav" id=nav-trimmaus>Trimmaus</a>
+    <a onclick="closeAll(); changePage();" href="linkkejä" data-navigo class="w3-bar-item w3-button globalNavlink nav active" id=nav-linkkejä>Linkkejä</a>
+
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+  <h3 class="w3-wide" style="max-width:196px;margin-left:16px;float:left"><b>KENNEL</b><br><b>RIGRETA'S</b></h3>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" id="content" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+
+  <!-- Top header -->
+  <header class="w3-container w3-xlarge">
+    <p class="w3-left" id="otsikko"></p>
+  </header>
+
+  <div style="display:none">
+      <h3>Tervetuloa tutustumaan Rigreta's kenneliin!<h3>
+  </div>
+
+  <div id="IE-warning" style="display:none">
+    <div id="warning-message" class="w3-row" style="padding:16px;">
+    </div>
+  </div>
+
+  <div id="main">
+  </div>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <!-- The Close Button -->
+    <span class="close">&times;</span>
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img01">
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption"></div>
+  </div>
+
+
+  <!-- Footer -->
+  <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer">
+    <div class="w3-row-padding">
+        <h4>Yhteystiedot</h4>
+        <p><i class="fa fa-fw"></i>Riikka Ahtila</p>
+        <p><i class="fa fa-fw fa-phone"></i> 0505587389</p>
+        <p><i class="fa fa-fw fa-envelope"></i> rigretas@gmail.com</p>
+				<p><i class="fa fa-fw fa-map-marker"></i> Laamannintie 9 14300 Renko</p>
+        <p><b>Y-tunnus:</b> 2927495-3</p>
+        <p><a onclick="closeAll(); changePage();" href="policy" data-navigo style="margin-bottom:132px;">Tietosuojaseloste</a></p>
+        <p><a onclick="closeAll(); changePage();" href="terms" data-navigo>Käyttöehdot</a></p>
+
+        <a href="https://web.facebook.com/groups/516478331874611" target="_blank" class="fa fa-facebook-official w3-hover-opacity w3-large"></a>
+        <a href="https://www.instagram.com/rigretas/" target="_blank" class="fa fa-instagram w3-hover-opacity w3-large"></a>
+    </div>
+  </footer>
+</div>
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+  <script>
+  window.addEventListener("load", function(){
+  window.cookieconsent.initialise({
+    "palette": {
+      "popup": {
+        "background": "#252e39"
+      },
+      "button": {
+        "background": "#14a7d0"
+      }
+    },
+    "theme": "classic",
+    "content": {
+      "message": "Tämä sivusto käyttää evästeitä käyttäjäkokemuksen parantamiseksi. Käyttämällä verkkosivustoa hyväksyt kaikki evästeet evästekäytäntöjemme mukaisesti.",
+      "dismiss": "Ok!",
+      "link": "Lue lisää",
+      "href": "/#!policy"
+    }
+  })});
+  </script>
+</body>
+
+<script>
+function Pudotus(y) {
+  console.trace();
+
+  var x = document.getElementById(y);
+	var state = x.className.indexOf("w3-show");
+
+  closeAll();
+
+	x = document.getElementById(y);
+	if (state == -1) {
+		x.className += " w3-show";
+	}
+}
+
+function hasClass(element, cls) {
+    return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+}
+
+function detectBrowser() {
+  var isIE = /*@cc_on!@*/false || !!document.documentMode;
+  if(isIE)
+  if(hasClass(document.getElementById('main'),'Loaded') == 0)
+  {
+    var node = document.createElement("h3");
+    var textnode = document.createTextNode("Pahoittelut, mutta jokin meni nyt pieleen");
+    node.appendChild(textnode);
+    document.getElementById("warning-message").appendChild(node);
+    if(isIE)
+    {
+      var node = document.createElement("p");
+      var textnode = document.createTextNode("Vaikuttaa siltä, että käytät Internet Explorer selainta. Olemme pahoillamme, mutta emme tue kyseistä selainta. Suosittelemme avaamaan sivun uudelleen Google Chromella, Mozilla Firefoxi:lla tai Microsoft Edge:llä.");
+      node.appendChild(textnode);
+    }
+    else
+    {
+      var node = document.createElement("p");
+      var textnode = document.createTextNode("Olemme pahoillamme, mutta emme tue käyttämääsi selainta. Suosittelemme avaamaan sivun uudelleen Google Chromella, Mozilla Firefoxi:lla tai Microsoft Edge:llä.");
+      node.appendChild(textnode);
+    }
+    document.getElementById("warning-message").appendChild(node);
+    document.getElementById("IE-warning").style.display = "block";
+  }
+}
+
+function changePage()
+{
+  window.scrollTo(0,0);
+  w3_close();
+}
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+function viewImage(url,text) {
+  // Get the modal
+  var modal = document.getElementById('myModal');
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var modalImg = document.getElementById("img01");
+  var captionText = document.getElementById("caption");
+  modal.style.display = "block";
+  modalImg.src = url;
+  captionText.innerHTML = text;
+
+}
+
+// When the user clicks on <span> (x), close the modal
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function() {
+  var modal = document.getElementById('myModal');
+  modal.style.display = "none";
+}
+
+</script>
+
+<script src="jquery-3.3.1.min.js"></script>
+<script src="navigo.min.js"></script>
+<script src="main.js"></script>
