@@ -81,6 +81,7 @@ function galleryButtonclick(x)
       'betty': () => {updateNav('betty',"Betty", "pudotus-koirat"); loadHTML('./Content/Koirat/betty.html','main',initContent);},
       'siru': () => {updateNav('siru',"Siru", "pudotus-koirat"); loadHTML('./Content/Koirat/siru.html','main',initContent);},
       'casper': () => {updateNav('casper',"Casper", "pudotus-koirat"); loadHTML('./Content/Koirat/casper.html','main',initContent);},
+			      'luna': () => {updateNav('luna',"Luna", "pudotus-koirat"); loadHTML('./Content/Koirat/luna.html','main',initContent);},
       'retu': () => {updateNav('retu',"Retu", "pudotus-koirat"); loadHTML('./Content/Koirat/retu.html','main',initContent);},
       'tahvo': () => {updateNav('tahvo',"Tahvo", "pudotus-muistoissa"); loadHTML('./Content/Muistoissa/tahvo.html','main',initContent);},
       'wilma': () => {updateNav('wilma',"Wilma", "pudotus-muistoissa"); loadHTML('./Content/Muistoissa/wilma.html','main',initContent);},
