@@ -88,7 +88,7 @@ function galleryButtonclick(x)
       'pretty': () => {updateNav('pretty',"Pretty-pentue", "pudotus-pennut"); loadHTML('./Content/Pennut/pretty.html','main',initContent);},
       'pennut': () => {updateNav('pennut',"Pennut", "pudotus-pennut"); loadHTML('./Content/Pennut/pennut.html','main',initContent);},
       'sijoituksessa': () => {updateNav('sijoituksessa',"Sijoituskoira", "pudotus-sijoituksessa"); loadHTML('./Content/Sijoituksessa/sijoituksessa.html','main',initContent);},
-      'testikoira': () => {updateNav('testikoira',"Testikoira", "pudotus-sijoituksessa"); loadHTML('./Content/Sijoituksessa/testikoira.html','main',initContent);},
+      'reea': () => {updateNav('reea',"Reea", "pudotus-sijoituksessa"); loadHTML('./Content/Sijoituksessa/reea.html','main',initContent);},
 			'raakaruokinta': () => {updateNav('raakaruokinta',"Raakaruokinta"); loadHTML('./Content/raakaruokinta.html','main',initContent);},
       'trimmaus': () => {updateNav('trimmaus',"Trimmaus"); loadHTML('./Content/trimmaus.html','main',initContent);},
       'policy': () => {updateNav('',"Tietosuojaseloste"); loadHTML('./Content/privacy.html','main',initContent);},
