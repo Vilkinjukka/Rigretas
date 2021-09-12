@@ -91,6 +91,7 @@ function galleryButtonclick(x)
       'sijoituksessa': () => {updateNav('sijoituksessa',"Sijoituskoira", "pudotus-sijoituksessa"); loadHTML('./Content/Sijoituksessa/sijoituksessa.html','main',initContent);},
       'reea': () => {updateNav('reea',"Reea", "pudotus-sijoituksessa"); loadHTML('./Content/Sijoituksessa/reea.html','main',initContent);},
 	 'albert': () => {updateNav('albert',"Albert", "pudotus-sijoituksessa"); loadHTML('./Content/Sijoituksessa/albert.html','main',initContent);},
+			      'yhteistyossa': () => {updateNav('yhteistyossa',"Yhteistyössä"); loadHTML('./Content/yhteistyossa.html','main',initContent);},
 	'raakaruokinta': () => {updateNav('raakaruokinta',"Raakaruokinta"); loadHTML('./Content/raakaruokinta.html','main',initContent);},
       'trimmaus': () => {updateNav('trimmaus',"Trimmaus"); loadHTML('./Content/trimmaus.html','main',initContent);},
       'policy': () => {updateNav('',"Tietosuojaseloste"); loadHTML('./Content/privacy.html','main',initContent);},
